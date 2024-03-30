@@ -1,13 +1,8 @@
-import time
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
-from base import Methods
-from selenium.webdriver.support import expected_conditions as ec
+
+from base.Methods import Methods
 from faker import Faker
-import csv
 
 fake = Faker()
-
 
 class MenuAction:
 

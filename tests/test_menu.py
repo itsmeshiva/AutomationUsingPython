@@ -1,5 +1,4 @@
 
-from faker import Faker
 from utilities.readProperties import ReadConfig
 from pageObjects.HomePage.Menu import MenuAction
 
@@ -13,6 +12,7 @@ class TestMenuFeature:
     location_page_url = ReadConfig.get_locations_url()
     product_page_url = ReadConfig.get_products_url()
     services_page_url = ReadConfig.get_services_url()
+    
     def test_verifying_about_us_page_url(self, setup):
         self.driver = setup
         self.driver.get(self.application_url)

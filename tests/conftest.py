@@ -1,15 +1,11 @@
 import pytest
-
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.firefox import GeckoDriverManager
-#from selenium.webdriver.firefox.service import Service
 
 @pytest.fixture()
 def setup():
-#def setup(request, browser):
-    service = Service()
+
+    service = Service(executable_path="C:/Users/SHIVA/OneDrive/Desktop/Test Automation/First_project_on_text_automation/chromedriver-win64/chromedriver.exe")
     options = webdriver.ChromeOptions()
 
     options.add_argument("use-fake-ui-for-media-stream")
@@ -22,13 +18,6 @@ def setup():
     )
     driver = webdriver.Chrome(service=service, options=options)
     return driver
-
-    #if browser == "chrome":
-      #  driver = webdriver.Chrome(webdriver.Chrome(service=ChromeService(ChromeDriverManager().install())))
-      #  return driver
-    #if browser == "firefox":
-     #   driver = webdriver.Firefox(service= Service(GeckoDriverManager().install()))
-      #  return driver
 
 @pytest.fixture()
 def browser(request):

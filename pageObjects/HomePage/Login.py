@@ -1,12 +1,11 @@
-import json
+
 import time
 import pandas as pd
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
-from base import Methods
+from base.Methods import Methods
 from selenium.webdriver.support import expected_conditions as ec
 from faker import Faker
-import csv
 
 fake = Faker()
 
